@@ -1,0 +1,1302 @@
+{
+  "contractName": "RightsEnum",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor",
+      "signature": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "setValues",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0xe26d1474"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getValue",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x20965255"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b5060008060006101000a81548160ff0219169083600681111561002f57fe5b021790555061014f806100436000396000f3fe60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632096525514610051578063e26d14741461007c575b600080fd5b34801561005d57600080fd5b506100666100b7565b6040518082815260200191505060405180910390f35b34801561008857600080fd5b506100b56004803603602081101561009f57600080fd5b81019080803590602001909291905050506100d8565b005b60008060009054906101000a900460ff1660068111156100d357fe5b905090565b80600160068111156100e657fe5b101515156100f357600080fd5b8060068111156100ff57fe5b6000806101000a81548160ff0219169083600681111561011b57fe5b02179055505056fea165627a7a723058209735b2632e254e91e52aac149f782495665a393d0b8d8d913f6308865d5a5f660029",
+  "deployedBytecode": "0x60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632096525514610051578063e26d14741461007c575b600080fd5b34801561005d57600080fd5b506100666100b7565b6040518082815260200191505060405180910390f35b34801561008857600080fd5b506100b56004803603602081101561009f57600080fd5b81019080803590602001909291905050506100d8565b005b60008060009054906101000a900460ff1660068111156100d357fe5b905090565b80600160068111156100e657fe5b101515156100f357600080fd5b8060068111156100ff57fe5b6000806101000a81548160ff0219169083600681111561011b57fe5b02179055505056fea165627a7a723058209735b2632e254e91e52aac149f782495665a393d0b8d8d913f6308865d5a5f660029",
+  "sourceMap": "25:466:3:-;;;208:60;8:9:-1;5:2;;;30:1;27;20:12;5:2;208:60:3;248:13;239:6;;:22;;;;;;;;;;;;;;;;;;;;;;;;25:466;;;;;;",
+  "deployedSourceMap": "25:466:3:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;406:82;;8:9:-1;5:2;;;30:1;27;20:12;5:2;406:82:3;;;;;;;;;;;;;;;;;;;;;;;274:126;;8:9:-1;5:2;;;30:1;27;20:12;5:2;274:126:3;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;274:126:3;;;;;;;;;;;;;;;;;;;;406:82;447:4;474:6;;;;;;;;;;;469:12;;;;;;;;462:19;;406:82;:::o;274:126::-;353:6;336:12;331:18;;;;;;;;:28;;323:37;;;;;;;;386:6;379:14;;;;;;;;370:6;;:23;;;;;;;;;;;;;;;;;;;;;;;;274:126;:::o",
+  "source": "pragma solidity ^0.5.0;\n\ncontract RightsEnum {\n\n    enum Rights {\n        VIEWER,\n        OWNER,\n        TENANT,\n        INVESTOR,\n        GOVT,\n        CARETAKER,\n        ADMIN\n    }\n    Rights rights;\n\n    constructor() public {\n        rights = Rights.VIEWER;\n    }\n\n    function setValues(uint _value) public {\n        require(uint(Rights.OWNER) >= _value);\n        rights = Rights(_value);\n    }\n\n    function getValue() public view returns (uint){\n        return uint(rights);\n    }\n\n}",
+  "sourcePath": "/home/hoop/WebstormProjects/etherium/smartestate/etherium/contracts/RightsEnum.sol",
+  "ast": {
+    "absolutePath": "/home/hoop/WebstormProjects/etherium/smartestate/etherium/contracts/RightsEnum.sol",
+    "exportedSymbols": {
+      "RightsEnum": [
+        592
+      ]
+    },
+    "id": 593,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 541,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 592,
+        "linearizedBaseContracts": [
+          592
+        ],
+        "name": "RightsEnum",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "RightsEnum.Rights",
+            "id": 549,
+            "members": [
+              {
+                "id": 542,
+                "name": "VIEWER",
+                "nodeType": "EnumValue",
+                "src": "74:6:3"
+              },
+              {
+                "id": 543,
+                "name": "OWNER",
+                "nodeType": "EnumValue",
+                "src": "90:5:3"
+              },
+              {
+                "id": 544,
+                "name": "TENANT",
+                "nodeType": "EnumValue",
+                "src": "105:6:3"
+              },
+              {
+                "id": 545,
+                "name": "INVESTOR",
+                "nodeType": "EnumValue",
+                "src": "121:8:3"
+              },
+              {
+                "id": 546,
+                "name": "GOVT",
+                "nodeType": "EnumValue",
+                "src": "139:4:3"
+              },
+              {
+                "id": 547,
+                "name": "CARETAKER",
+                "nodeType": "EnumValue",
+                "src": "153:9:3"
+              },
+              {
+                "id": 548,
+                "name": "ADMIN",
+                "nodeType": "EnumValue",
+                "src": "172:5:3"
+              }
+            ],
+            "name": "Rights",
+            "nodeType": "EnumDefinition",
+            "src": "52:131:3"
+          },
+          {
+            "constant": false,
+            "id": 551,
+            "name": "rights",
+            "nodeType": "VariableDeclaration",
+            "scope": 592,
+            "src": "188:13:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_enum$_Rights_$549",
+              "typeString": "enum RightsEnum.Rights"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 550,
+              "name": "Rights",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 549,
+              "src": "188:6:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_enum$_Rights_$549",
+                "typeString": "enum RightsEnum.Rights"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 559,
+              "nodeType": "Block",
+              "src": "229:39:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 557,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 554,
+                      "name": "rights",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 551,
+                      "src": "239:6:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Rights_$549",
+                        "typeString": "enum RightsEnum.Rights"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 555,
+                        "name": "Rights",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 549,
+                        "src": "248:6:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_Rights_$549_$",
+                          "typeString": "type(enum RightsEnum.Rights)"
+                        }
+                      },
+                      "id": 556,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "VIEWER",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "248:13:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Rights_$549",
+                        "typeString": "enum RightsEnum.Rights"
+                      }
+                    },
+                    "src": "239:22:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Rights_$549",
+                      "typeString": "enum RightsEnum.Rights"
+                    }
+                  },
+                  "id": 558,
+                  "nodeType": "ExpressionStatement",
+                  "src": "239:22:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 560,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 552,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "219:2:3"
+            },
+            "returnParameters": {
+              "id": 553,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "229:0:3"
+            },
+            "scope": 592,
+            "src": "208:60:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 580,
+              "nodeType": "Block",
+              "src": "313:87:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 571,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 567,
+                                "name": "Rights",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 549,
+                                "src": "336:6:3",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_enum$_Rights_$549_$",
+                                  "typeString": "type(enum RightsEnum.Rights)"
+                                }
+                              },
+                              "id": 568,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "memberName": "OWNER",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": null,
+                              "src": "336:12:3",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_enum$_Rights_$549",
+                                "typeString": "enum RightsEnum.Rights"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_enum$_Rights_$549",
+                                "typeString": "enum RightsEnum.Rights"
+                              }
+                            ],
+                            "id": 566,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "331:4:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_uint256_$",
+                              "typeString": "type(uint256)"
+                            },
+                            "typeName": "uint"
+                          },
+                          "id": 569,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "331:18:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 570,
+                          "name": "_value",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 562,
+                          "src": "353:6:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "331:28:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 565,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1593,
+                        1594
+                      ],
+                      "referencedDeclaration": 1593,
+                      "src": "323:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 572,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "323:37:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 573,
+                  "nodeType": "ExpressionStatement",
+                  "src": "323:37:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 578,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 574,
+                      "name": "rights",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 551,
+                      "src": "370:6:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Rights_$549",
+                        "typeString": "enum RightsEnum.Rights"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 576,
+                          "name": "_value",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 562,
+                          "src": "386:6:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "id": 575,
+                        "name": "Rights",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 549,
+                        "src": "379:6:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_Rights_$549_$",
+                          "typeString": "type(enum RightsEnum.Rights)"
+                        }
+                      },
+                      "id": 577,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "379:14:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Rights_$549",
+                        "typeString": "enum RightsEnum.Rights"
+                      }
+                    },
+                    "src": "370:23:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Rights_$549",
+                      "typeString": "enum RightsEnum.Rights"
+                    }
+                  },
+                  "id": 579,
+                  "nodeType": "ExpressionStatement",
+                  "src": "370:23:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 581,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setValues",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 563,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 562,
+                  "name": "_value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 581,
+                  "src": "293:11:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 561,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "293:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "292:13:3"
+            },
+            "returnParameters": {
+              "id": 564,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "313:0:3"
+            },
+            "scope": 592,
+            "src": "274:126:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 590,
+              "nodeType": "Block",
+              "src": "452:36:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 587,
+                        "name": "rights",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 551,
+                        "src": "474:6:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_Rights_$549",
+                          "typeString": "enum RightsEnum.Rights"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_enum$_Rights_$549",
+                          "typeString": "enum RightsEnum.Rights"
+                        }
+                      ],
+                      "id": 586,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "469:4:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_uint256_$",
+                        "typeString": "type(uint256)"
+                      },
+                      "typeName": "uint"
+                    },
+                    "id": 588,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "469:12:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 585,
+                  "id": 589,
+                  "nodeType": "Return",
+                  "src": "462:19:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 591,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getValue",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 582,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "423:2:3"
+            },
+            "returnParameters": {
+              "id": 585,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 584,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 591,
+                  "src": "447:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 583,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "447:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "446:6:3"
+            },
+            "scope": 592,
+            "src": "406:82:3",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 593,
+        "src": "25:466:3"
+      }
+    ],
+    "src": "0:491:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/hoop/WebstormProjects/etherium/smartestate/etherium/contracts/RightsEnum.sol",
+    "exportedSymbols": {
+      "RightsEnum": [
+        592
+      ]
+    },
+    "id": 593,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 541,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 592,
+        "linearizedBaseContracts": [
+          592
+        ],
+        "name": "RightsEnum",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "RightsEnum.Rights",
+            "id": 549,
+            "members": [
+              {
+                "id": 542,
+                "name": "VIEWER",
+                "nodeType": "EnumValue",
+                "src": "74:6:3"
+              },
+              {
+                "id": 543,
+                "name": "OWNER",
+                "nodeType": "EnumValue",
+                "src": "90:5:3"
+              },
+              {
+                "id": 544,
+                "name": "TENANT",
+                "nodeType": "EnumValue",
+                "src": "105:6:3"
+              },
+              {
+                "id": 545,
+                "name": "INVESTOR",
+                "nodeType": "EnumValue",
+                "src": "121:8:3"
+              },
+              {
+                "id": 546,
+                "name": "GOVT",
+                "nodeType": "EnumValue",
+                "src": "139:4:3"
+              },
+              {
+                "id": 547,
+                "name": "CARETAKER",
+                "nodeType": "EnumValue",
+                "src": "153:9:3"
+              },
+              {
+                "id": 548,
+                "name": "ADMIN",
+                "nodeType": "EnumValue",
+                "src": "172:5:3"
+              }
+            ],
+            "name": "Rights",
+            "nodeType": "EnumDefinition",
+            "src": "52:131:3"
+          },
+          {
+            "constant": false,
+            "id": 551,
+            "name": "rights",
+            "nodeType": "VariableDeclaration",
+            "scope": 592,
+            "src": "188:13:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_enum$_Rights_$549",
+              "typeString": "enum RightsEnum.Rights"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 550,
+              "name": "Rights",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 549,
+              "src": "188:6:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_enum$_Rights_$549",
+                "typeString": "enum RightsEnum.Rights"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 559,
+              "nodeType": "Block",
+              "src": "229:39:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 557,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 554,
+                      "name": "rights",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 551,
+                      "src": "239:6:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Rights_$549",
+                        "typeString": "enum RightsEnum.Rights"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 555,
+                        "name": "Rights",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 549,
+                        "src": "248:6:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_Rights_$549_$",
+                          "typeString": "type(enum RightsEnum.Rights)"
+                        }
+                      },
+                      "id": 556,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "VIEWER",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "248:13:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Rights_$549",
+                        "typeString": "enum RightsEnum.Rights"
+                      }
+                    },
+                    "src": "239:22:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Rights_$549",
+                      "typeString": "enum RightsEnum.Rights"
+                    }
+                  },
+                  "id": 558,
+                  "nodeType": "ExpressionStatement",
+                  "src": "239:22:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 560,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 552,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "219:2:3"
+            },
+            "returnParameters": {
+              "id": 553,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "229:0:3"
+            },
+            "scope": 592,
+            "src": "208:60:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 580,
+              "nodeType": "Block",
+              "src": "313:87:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 571,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 567,
+                                "name": "Rights",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 549,
+                                "src": "336:6:3",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_enum$_Rights_$549_$",
+                                  "typeString": "type(enum RightsEnum.Rights)"
+                                }
+                              },
+                              "id": 568,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "memberName": "OWNER",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": null,
+                              "src": "336:12:3",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_enum$_Rights_$549",
+                                "typeString": "enum RightsEnum.Rights"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_enum$_Rights_$549",
+                                "typeString": "enum RightsEnum.Rights"
+                              }
+                            ],
+                            "id": 566,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "331:4:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_uint256_$",
+                              "typeString": "type(uint256)"
+                            },
+                            "typeName": "uint"
+                          },
+                          "id": 569,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "331:18:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 570,
+                          "name": "_value",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 562,
+                          "src": "353:6:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "331:28:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 565,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1593,
+                        1594
+                      ],
+                      "referencedDeclaration": 1593,
+                      "src": "323:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 572,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "323:37:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 573,
+                  "nodeType": "ExpressionStatement",
+                  "src": "323:37:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 578,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 574,
+                      "name": "rights",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 551,
+                      "src": "370:6:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Rights_$549",
+                        "typeString": "enum RightsEnum.Rights"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 576,
+                          "name": "_value",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 562,
+                          "src": "386:6:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "id": 575,
+                        "name": "Rights",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 549,
+                        "src": "379:6:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_Rights_$549_$",
+                          "typeString": "type(enum RightsEnum.Rights)"
+                        }
+                      },
+                      "id": 577,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "379:14:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Rights_$549",
+                        "typeString": "enum RightsEnum.Rights"
+                      }
+                    },
+                    "src": "370:23:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Rights_$549",
+                      "typeString": "enum RightsEnum.Rights"
+                    }
+                  },
+                  "id": 579,
+                  "nodeType": "ExpressionStatement",
+                  "src": "370:23:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 581,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setValues",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 563,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 562,
+                  "name": "_value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 581,
+                  "src": "293:11:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 561,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "293:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "292:13:3"
+            },
+            "returnParameters": {
+              "id": 564,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "313:0:3"
+            },
+            "scope": 592,
+            "src": "274:126:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 590,
+              "nodeType": "Block",
+              "src": "452:36:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 587,
+                        "name": "rights",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 551,
+                        "src": "474:6:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_Rights_$549",
+                          "typeString": "enum RightsEnum.Rights"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_enum$_Rights_$549",
+                          "typeString": "enum RightsEnum.Rights"
+                        }
+                      ],
+                      "id": 586,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "469:4:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_uint256_$",
+                        "typeString": "type(uint256)"
+                      },
+                      "typeName": "uint"
+                    },
+                    "id": 588,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "469:12:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 585,
+                  "id": 589,
+                  "nodeType": "Return",
+                  "src": "462:19:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 591,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getValue",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 582,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "423:2:3"
+            },
+            "returnParameters": {
+              "id": 585,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 584,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 591,
+                  "src": "447:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 583,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "447:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "446:6:3"
+            },
+            "scope": 592,
+            "src": "406:82:3",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 593,
+        "src": "25:466:3"
+      }
+    ],
+    "src": "0:491:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {
+    "4": {
+      "events": {},
+      "links": {},
+      "address": "0x6A6Ab584A4bCa6A693C3e1971b3c48Ee05Fe415E",
+      "transactionHash": "0x0edf10f0f520c09f61fc68fec6f32a54ef039c1e074f0e9afdcf12c281e01b7c"
+    }
+  },
+  "schemaVersion": "3.0.0",
+  "updatedAt": "2018-12-31T14:02:16.517Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
