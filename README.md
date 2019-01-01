@@ -3,7 +3,7 @@
 Inspired by [ConsesSys real estate standards](https://github.com/ConsenSys/real-estate-standards)
 
 Includes a rough skeleton of land (spatial units) governance sysytem.
-Note that this was built in one day -> there is a lot of room for improvements and this is far from production.
+Note that this was built in one day -> there is a lot of room for improvements and this is far from production. Code is mostly not properly secured and style is not very consistent. The aim was to make as much as possible functionality within a very limited amount of time.
 
 #### SpatialUnitRegistry  
 Land units registry (`geohash` coordinates format).
